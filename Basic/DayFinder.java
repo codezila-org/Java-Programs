@@ -83,7 +83,7 @@ class DayFinder{
             year = Integer.parseInt(temp[2]);
 
             // ! Input Date Validation_______30 & 31 should not in feb & 29, 30 & 31 should not if not a Leap year__________31st should not in April, June, Sep, Nov_______________
-            if(date>31 || month>12 || year<1583 || (month==2 && ((year%4==0 && year%100!=0 || year%400==0) && date>29) || date>28) || (date>30 && (month==4 || month==6 || month==9 || month==11))){
+            if(date>31 || month>12 || year<1583 || (month==2 && (((year%4==0 && year%100!=0 || year%400==0) && date>29) || date>28)) || ((month==4 || month==6 || month==9 || month==11) && date>30)){
                 throw new Exception("Invalid Date");
             }
         }catch(Exception e){
