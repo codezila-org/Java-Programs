@@ -55,7 +55,7 @@ class PatternMatrix{
 
                 }else if( j> input/2 && i <= j){
 
-                    //* Incrementing left column values (23-19, 39-37)
+                    //* Incrementing right column values (29-33, 43-45)
                     System.out.print(((input-input%(j+1))*4*(input%(j+1))+j-(input%j-2)+(i-(input%(j+1))))+" ");
 
                 }else if( j >= input-i && i >= input/2){
